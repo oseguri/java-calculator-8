@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class InputValidator {
 
-    public final static String defaultSeparator = ",;";
+    public final static String defaultSeparator = ",:";
     public final static String defaultReg = "(^//\\D\\\\n)?((\\d+)[%s]?)*";
 
     public static boolean validate(String input) {
@@ -29,7 +29,7 @@ public class InputValidator {
             String separator = matcher.group(1);
             if(!defaultSeparator.contains(separator)) return defaultSeparator.concat(separator);
         }
-        return ",;";
+        return defaultSeparator;
     }
 
 }

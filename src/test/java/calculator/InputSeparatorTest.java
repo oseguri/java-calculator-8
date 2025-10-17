@@ -15,7 +15,7 @@ public class InputSeparatorTest {
     public void separatorTest() {
         List<Integer> list = Arrays.asList(1,223,45,5);
         Assertions.assertAll(
-                () -> Assertions.assertEquals(InputSeparator.getSeparatedNums("//!\\n1!223,45!5"), list),
+                () -> Assertions.assertEquals(InputSeparator.getSeparatedNums("//!\\n1:223,45!5"), list),
                 () -> Assertions.assertTrue(InputSeparator.getSeparatedNums("").isEmpty())
         );
     }
